@@ -1,5 +1,5 @@
 #!/bin/sh
-input="//home/rakeshbhat9/repos/twint/nm_follow.csv"
+input="///home/rbhat/notebooks/tweet/nm_follow.csv"
 while read -r line
 echo "Getting data from user $line"
 do
@@ -7,5 +7,6 @@ do
         --min-likes 100 \
         -fr \
         --limit 60 \
-        >> followers_tweet_v1.csv
+        -l en \
+        >> followers_tweet.csv
 done < "$input"
